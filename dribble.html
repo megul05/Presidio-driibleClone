@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribble</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "category-filter">
+            <div class = "container">
+                <div class = "title" style="background-color: black;">
+                    <h1 style="color: yellow; ">Drrible</h1>
+                </div>
+                <div style="background-color: black;padding: 10px;">
+                <div class = "filter-btns">
+                    <button type = "button" class = "filter-btn" id = "all">All</button>
+                    <button type = "button" class = "filter-btn" id = "animation">Animation</button>
+                    <button type = "button" class = "filter-btn" id = "branding">Branding</button>
+                    <button type = "button" class = "filter-btn" id = "specials">Mobile</button>
+                    <button type = "button" class = "filter-btn" id = "special">Web Design</button>
+                    <input type="text" id="searchBar" placeholder="Search..." onkeyup="search()" style="margin-left: 10px; padding: 5px;">
+                        <button type="button" onclick="search()" style="padding: 5px;">Search</button>
+                        &nbsp;&nbsp;&nbsp;
+                        <button type="button" onclick="logout()" style="padding: 5px;">Logout</button>
+                </div>
+            </div>
+
+                <div class = "filter-items">
+
+                    <div class = "filter-item all animation">
+                        <div class = "item-img">
+                            <img src = "./images/image1.png.png" alt = "Item image">
+                        </div>
+                        <div class = "item-info">
+                            <p>Right Arrow Animating</p>
+                           <div class="btns">
+                                <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fas fa-heart"></i> <span id="likeCount1">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                    <div class = "filter-item all branding">
+                        <div class = "item-img">
+                            <img src = "./images/image2.png.png" alt = "Item image">
+                            <!-- <span class="discount">
+                                <button>
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </span> -->
+                        </div>
+                        <div class = "item-info">
+                            <p>Branding Like BMW</p>
+                            <div class="btns">
+                                <button onclick="Toggle2()" id="btnh2" class="btn"><i class="fas fa-heart"></i> <span id="likeCount2">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all specials">
+                        <div class = "item-img">
+                            <img src = "images/image3.png.png" alt = "Item image">
+                           
+                        </div>
+                        <div class = "item-info">
+                            <p>User Interface</p>
+                            <div class="btns">
+                                <button onclick="Toggle3()" id="btnh3" class="btn"><i class="fas fa-heart"></i> <span id="likeCount3">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all special">
+                        <div class = "item-img">
+                            <img src = "images/image4.png" alt = "Item image">
+                            
+                        </div>
+                        <div class = "item-info">
+                            <p>Music Web UI</p>
+                            <div class="btns">
+                                <button onclick="Toggle4()" id="btnh4" class="btn"><i class="fas fa-heart"></i> <span id="likeCount4">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all branding">
+                        <div class = "item-img">
+                            <img src = "./images/image5.png" alt = "Item image">
+                         </div>   
+                        <div class = "item-info">
+                            <p>Computer Design </p>
+                            <div class="btns">
+                                <button onclick="Toggle5()" id="btnh5" class="btn"><i class="fas fa-heart"></i> <span id="likeCount5">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all animation">
+                        <div class = "item-img">
+                            <img src = "images/image6.png" alt = "Item image">
+                           
+                        </div>
+                        <div class = "item-info">
+                            <p>Motion UI</p>
+                            <div class="btns">
+                                <button onclick="Toggle6()" id="btnh6" class="btn"><i class="fas fa-heart"></i> <span id="likeCount6">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all special">
+                        <div class = "item-img">
+                            <img src = "images/image7.png" alt = "Item image">
+                            
+                        </div>
+                        <div class = "item-info">
+                            <p>Attractive About Web Design</p>
+                            <div class="btns">
+                                <button onclick="Toggle7()" id="btnh7" class="btn"><i class="fas fa-heart"></i> <span id="likeCount7">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all specials">
+                        <div class = "item-img">
+                            <img src = "images/image8.png" alt = "Item image">
+                        
+                        </div>
+                        <div class = "item-info">
+                            <p>Calculator AttractiveUI</p>
+                            <div class="btns">
+                                <button onclick="Toggle8()" id="btnh8" class="btn"><i class="fas fa-heart"></i> <span id="likeCount8">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all special">
+                        <div class = "item-img">
+                            <img src = "images/image9.png" alt = "Item image">
+                           
+                        </div>
+                        <div class = "item-info">
+                            <p>Orange Grey Web Design</p>
+                            <div class="btns">
+                                <button onclick="Toggle9()" id="btnh9" class="btn"><i class="fas fa-heart"></i> <span id="likeCount9">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all branding">
+                        <div class = "item-img">
+                            <img src = "images/image10.png" alt = "Item image">
+                           
+                        </div>
+                        <div class = "item-info">
+                            <p>Baskin Robins</p>
+                            <div class="btns">
+                                <button onclick="Toggle10()" id="btnh10" class="btn"><i class="fas fa-heart"></i> <span id="likeCount10">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all specials">
+                        <div class = "item-img">
+                            <img src = "images/image11.png" alt = "Item image">
+                           
+                        </div>
+                        <div class = "item-info">
+                            <p>Mobile Login Design</p>
+                            <div class="btns">
+                                <button onclick="Toggle11()" id="btnh11" class="btn"><i class="fas fa-heart"></i> <span id="likeCount11">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-item all animation">
+                        <div class="item-img">
+                            <img src="images/image12.png" alt="Item image">
+                        </div>
+                        <div class="item-info">
+                            <p>AI Animative</p>
+                            <div class="btns">
+                                <button onclick="Toggle12()" id="btnh12" class="btn"><i class="fas fa-heart"></i> <span id="likeCount12">0</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+
+    <script>
+
+        function logout() {
+        // You can perform any additional logout-related actions here
+        // For now, let's simply navigate to login.html
+        window.location.href = 'login.html';
+    }
+
+        function search() {
+            var searchTerm = document.getElementById("searchBar").value.toLowerCase();
+
+            // Loop through all filter items
+            var filterItems = document.querySelectorAll(".filter-item");
+            filterItems.forEach(function (item) {
+                var itemName = item.querySelector(".item-info p").innerText.toLowerCase();
+
+                // Check if the item name contains the search term
+                if (itemName.includes(searchTerm)) {
+                    item.style.display = "flex"; // Show the item
+                } else {
+                    item.style.display = "none"; // Hide the item
+                }
+            });
+        }
+    </script>
+
+    <script>
+       
+        //1st like
+            var likeCount1 = localStorage.getItem('likeCount1') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar1 = document.getElementById("btnh1");
+            var likeCountSpan1 = document.getElementById("likeCount1");
+            likeCountSpan1.innerText = likeCount1;
+
+            function Toggle1() {
+                if (btnvar1.style.color == "red") {
+                    btnvar1.style.color = "grey";
+                    likeCount1--;
+                } else {
+                    btnvar1.style.color = "red";
+                    likeCount1++;
+                }
+
+                likeCountSpan1.innerText = likeCount1;  // Update the like count in the span
+                localStorage.setItem('likeCount1', likeCount1);  // Save like count to localStorage
+            }
+
+
+    //2nd like
+            var likeCount2 = localStorage.getItem('likeCount2') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar2 = document.getElementById("btnh2");
+            var likeCountSpan2 = document.getElementById("likeCount2");
+            likeCountSpan2.innerText = likeCount2;
+
+            function Toggle2() {
+                if (btnvar2.style.color == "red") {
+                    btnvar2.style.color = "grey";
+                    likeCount2--;
+                } else {
+                    btnvar2.style.color = "red";
+                    likeCount2++;
+                }
+
+                likeCountSpan2.innerText = likeCount2;  // Update the like count in the span
+                localStorage.setItem('likeCount2', likeCount2);  // Save like count to localStorage
+            }
+
+    //3rd like
+            var likeCount3 = localStorage.getItem('likeCount3') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar3 = document.getElementById("btnh3");
+            var likeCountSpan3 = document.getElementById("likeCount3");
+            likeCountSpan3.innerText = likeCount3;
+
+            function Toggle3() {
+                if (btnvar3.style.color == "red") {
+                    btnvar3.style.color = "grey";
+                    likeCount3--;
+                } else {
+                    btnvar3.style.color = "red";
+                    likeCount3++;
+                }
+
+                likeCountSpan3.innerText = likeCount3;  // Update the like count in the span
+                localStorage.setItem('likeCount3', likeCount3);  // Save like count to localStorage
+            }
+
+    //4th like
+            var likeCount4 = localStorage.getItem('likeCount4') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar4 = document.getElementById("btnh4");
+            var likeCountSpan4 = document.getElementById("likeCount4");
+            likeCountSpan4.innerText = likeCount4;
+
+            function Toggle4() {
+                if (btnvar4.style.color == "red") {
+                    btnvar4.style.color = "grey";
+                    likeCount4--;
+                } else {
+                    btnvar4.style.color = "red";
+                    likeCount4++;
+                }
+
+                likeCountSpan4.innerText = likeCount4;  // Update the like count in the span
+                localStorage.setItem('likeCount4', likeCount4);  // Save like count to localStorage
+            }
+        
+
+    //5th like
+            var likeCount5 = localStorage.getItem('likeCount5') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar5 = document.getElementById("btnh5");
+            var likeCountSpan5 = document.getElementById("likeCount5");
+            likeCountSpan5.innerText = likeCount5;
+
+            function Toggle5() {
+                if (btnvar5.style.color == "red") {
+                    btnvar5.style.color = "grey";
+                    likeCount5--;
+                } else {
+                    btnvar5.style.color = "red";
+                    likeCount5++;
+                }
+
+                likeCountSpan5.innerText = likeCount5;  // Update the like count in the span
+                localStorage.setItem('likeCount5', likeCount5);  // Save like count to localStorage
+            }
+
+     //6th like
+     var likeCount6 = localStorage.getItem('likeCount6') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar6 = document.getElementById("btnh6");
+            var likeCountSpan6 = document.getElementById("likeCount6");
+            likeCountSpan6.innerText = likeCount6;
+
+            function Toggle6() {
+                if (btnvar6.style.color == "red") {
+                    btnvar6.style.color = "grey";
+                    likeCount6--;
+                } else {
+                    btnvar6.style.color = "red";
+                    likeCount6++;
+                }
+
+                likeCountSpan6.innerText = likeCount6;  // Update the like count in the span
+                localStorage.setItem('likeCount6', likeCount6);  // Save like count to localStorage
+            }
+
+    //7th like
+    var likeCount7 = localStorage.getItem('likeCount7') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar7 = document.getElementById("btnh7");
+            var likeCountSpan7 = document.getElementById("likeCount7");
+            likeCountSpan7.innerText = likeCount7;
+
+            function Toggle7() {
+                if (btnvar7.style.color == "red") {
+                    btnvar7.style.color = "grey";
+                    likeCount7--;
+                } else {
+                    btnvar7.style.color = "red";
+                    likeCount7++;
+                }
+
+                likeCountSpan7.innerText = likeCount7;  // Update the like count in the span
+                localStorage.setItem('likeCount7', likeCount7);  // Save like count to localStorage
+            }
+
+
+    //8th like
+            var likeCount8 = localStorage.getItem('likeCount8') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar8 = document.getElementById("btnh8");
+            var likeCountSpan8 = document.getElementById("likeCount8");
+            likeCountSpan8.innerText = likeCount8;
+
+            function Toggle8() {
+                if (btnvar8.style.color == "red") {
+                    btnvar8.style.color = "grey";
+                    likeCount8--;
+                } else {
+                    btnvar8.style.color = "red";
+                    likeCount8++;
+                }
+
+                likeCountSpan8.innerText = likeCount8;  // Update the like count in the span
+                localStorage.setItem('likeCount8', likeCount8);  // Save like count to localStorage
+            }
+
+    //9th like
+            var likeCount9 = localStorage.getItem('likeCount9') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar9 = document.getElementById("btnh9");
+            var likeCountSpan9 = document.getElementById("likeCount9");
+            likeCountSpan9.innerText = likeCount9;
+
+            function Toggle9() {
+                if (btnvar9.style.color == "red") {
+                    btnvar9.style.color = "grey";
+                    likeCount9--;
+                } else {
+                    btnvar9.style.color = "red";
+                    likeCount9++;
+                }
+
+                likeCountSpan9.innerText = likeCount9;  // Update the like count in the span
+                localStorage.setItem('likeCount9', likeCount9);  // Save like count to localStorage
+            }
+
+       //10th like
+            var likeCount10 = localStorage.getItem('likeCount10') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar10 = document.getElementById("btnh10");
+            var likeCountSpan10 = document.getElementById("likeCount10");
+            likeCountSpan10.innerText = likeCount10;
+
+            function Toggle10() {
+                if (btnvar10.style.color == "red") {
+                    btnvar10.style.color = "grey";
+                    likeCount10--;
+                } else {
+                    btnvar10.style.color = "red";
+                    likeCount10++;
+                }
+
+                likeCountSpan10.innerText = likeCount10;  // Update the like count in the span
+                localStorage.setItem('likeCount10', likeCount10);  // Save like count to localStorage
+            }
+
+    //11th like
+            var likeCount11 = localStorage.getItem('likeCount11') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar11 = document.getElementById("btnh11");
+            var likeCountSpan11 = document.getElementById("likeCount11");
+            likeCountSpan11.innerText = likeCount11;
+
+            function Toggle11() {
+                if (btnvar11.style.color == "red") {
+                    btnvar11.style.color = "grey";
+                    likeCount11--;
+                } else {
+                    btnvar11.style.color = "red";
+                    likeCount11++;
+                }
+
+                likeCountSpan11.innerText = likeCount11;  // Update the like count in the span
+                localStorage.setItem('likeCount11', likeCount11);  // Save like count to localStorage
+            }
+
+    //12th like
+            var likeCount12 = localStorage.getItem('likeCount12') || 0;  // Retrieve like count from localStorage or default to 0
+            var btnvar12 = document.getElementById("btnh12");
+            var likeCountSpan12 = document.getElementById("likeCount12");
+            likeCountSpan12.innerText = likeCount12;
+
+            function Toggle12() {
+                if (btnvar12.style.color == "red") {
+                    btnvar12.style.color = "grey";
+                    likeCount12--;
+                } else {
+                    btnvar12.style.color = "red";
+                    likeCount12++;
+                }
+
+                likeCountSpan12.innerText = likeCount12;  // Update the like count in the span
+                localStorage.setItem('likeCount12', likeCount12);  // Save like count to localStorage
+            }
+
+
+           </script>
+</body>
+</html>
